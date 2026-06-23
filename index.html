@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Web Scraping &amp; Data Extraction — Python Developer</title>
+<meta name="description" content="Custom web scrapers and data extraction in Python. Clean CSV/JSON/Excel, fast delivery, reliable runs. Handles JavaScript-heavy sites." />
+<style>
+  :root{
+    --bg:#0f1117; --card:#171a23; --line:#262a36; --txt:#e7e9ee; --mut:#9aa3b2;
+    --acc:#4f8cff; --acc2:#22d3a7; --max:1040px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--txt);font:16px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--acc);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+  header{padding:18px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(15,17,23,.85);backdrop-filter:blur(8px);z-index:10}
+  header .wrap{display:flex;justify-content:space-between;align-items:center}
+  .brand{font-weight:700;letter-spacing:.3px}
+  .brand span{color:var(--acc2)}
+  nav a{color:var(--mut);margin-left:18px;font-size:14px}
+  .hero{padding:80px 0 60px;text-align:center}
+  .hero h1{font-size:42px;line-height:1.15;margin-bottom:18px}
+  .hero h1 span{color:var(--acc)}
+  .hero p{color:var(--mut);font-size:19px;max-width:680px;margin:0 auto 28px}
+  .btn{display:inline-block;background:var(--acc);color:#fff;padding:13px 26px;border-radius:9px;font-weight:600}
+  .btn.alt{background:transparent;border:1px solid var(--line);color:var(--txt);margin-left:10px}
+  .btn:hover{text-decoration:none;opacity:.92}
+  section{padding:56px 0;border-top:1px solid var(--line)}
+  h2{font-size:28px;margin-bottom:8px}
+  .sub{color:var(--mut);margin-bottom:30px}
+  .grid{display:grid;gap:18px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
+  .card h3{font-size:18px;margin-bottom:8px}
+  .card p{color:var(--mut);font-size:14.5px}
+  .tag{display:inline-block;font-size:12px;color:var(--acc2);border:1px solid var(--line);border-radius:20px;padding:3px 11px;margin:3px 4px 0 0}
+  .price{font-size:14px;color:var(--mut)}
+  .price b{color:var(--txt)}
+  ul.checks{list-style:none;margin-top:10px}
+  ul.checks li{padding-left:26px;position:relative;color:var(--mut);margin-bottom:8px}
+  ul.checks li::before{content:"✓";position:absolute;left:0;color:var(--acc2);font-weight:700}
+  .steps{counter-reset:s}
+  .steps .card{position:relative}
+  .steps .card::before{counter-increment:s;content:counter(s);position:absolute;top:-12px;left:18px;background:var(--acc);color:#fff;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:14px;font-weight:700}
+  footer{padding:40px 0;border-top:1px solid var(--line);color:var(--mut);text-align:center;font-size:14px}
+  @media(max-width:760px){.g3,.g2{grid-template-columns:1fr}.hero h1{font-size:32px}nav{display:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="brand">scrappy<span>.dev</span></div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#work">Work</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <h1>I turn messy websites into <span>clean, usable data</span></h1>
+  <p>Custom web scrapers in Python — delivered fast, built to keep working. You get the
+     dataset (CSV, JSON or Excel) <em>and</em> the code. Even JavaScript-heavy sites.</p>
+  <a class="btn" href="#contact">Get a free sample</a>
+  <a class="btn alt" href="https://github.com/salcar420" target="_blank" rel="noopener">See the code</a>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <h2>What I do</h2>
+  <p class="sub">If it's on a website, I can get it into a spreadsheet or your database.</p>
+  <div class="grid g3">
+    <div class="card">
+      <h3>Data extraction</h3>
+      <p>Product catalogs, prices, listings, reviews, directories, research datasets — structured and clean.</p>
+    </div>
+    <div class="card">
+      <h3>Price &amp; competitor monitoring</h3>
+      <p>Scheduled scrapers that track prices, stock or changes over time and alert you when something moves.</p>
+    </div>
+    <div class="card">
+      <h3>Lead lists</h3>
+      <p>Contact and company data pulled from public sources into a ready-to-use CSV.</p>
+    </div>
+    <div class="card">
+      <h3>JavaScript-heavy sites</h3>
+      <p>Sites that load with JS, infinite scroll or logins — handled with a real headless browser (Playwright).</p>
+    </div>
+    <div class="card">
+      <h3>Recurring / automated</h3>
+      <p>Set it and forget it: runs on a schedule, outputs where you need it, with monitoring so it doesn't fail silently.</p>
+    </div>
+    <div class="card">
+      <h3>One-off datasets</h3>
+      <p>Need a dataset once? Send the site and the fields — I'll deliver the data and the script.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <h2>Selected work</h2>
+  <p class="sub">Live, runnable code on GitHub.</p>
+  <div class="grid g3">
+    <div class="card">
+      <h3>scraper-toolkit</h3>
+      <p>A config-driven scraper: describe a site in YAML, get clean CSV/JSON/Excel. http + Playwright modes.</p>
+      <div><span class="tag">Python</span><span class="tag">Playwright</span><span class="tag">YAML</span></div>
+      <p style="margin-top:12px"><a href="https://github.com/salcar420/scraper-toolkit" target="_blank" rel="noopener">View on GitHub →</a></p>
+    </div>
+    <div class="card">
+      <h3>scrappy-js</h3>
+      <p>Playwright scraper for JavaScript-rendered sites — waits for content, paginates, exports clean data.</p>
+      <div><span class="tag">Playwright</span><span class="tag">JS sites</span></div>
+      <p style="margin-top:12px"><a href="https://github.com/salcar420/scrappy-js" target="_blank" rel="noopener">View on GitHub →</a></p>
+    </div>
+    <div class="card">
+      <h3>scrappy-book</h3>
+      <p>Classic scraper: 1,000 products across 50 paginated pages with retries and rate-limiting.</p>
+      <div><span class="tag">requests</span><span class="tag">BeautifulSoup</span></div>
+      <p style="margin-top:12px"><a href="https://github.com/salcar420/scrappy-book" target="_blank" rel="noopener">View on GitHub →</a></p>
+    </div>
+  </div>
+</div></section>
+
+<section id="process"><div class="wrap">
+  <h2>How it works</h2>
+  <p class="sub">Clear, fast, no surprises.</p>
+  <div class="grid g3 steps">
+    <div class="card"><h3>Tell me the target</h3><p>Send the site and the fields you need. I check feasibility and tell you exactly what's possible — before you pay.</p></div>
+    <div class="card"><h3>Free sample</h3><p>I run a quick sample of the first ~20 rows so you can confirm the output format.</p></div>
+    <div class="card"><h3>Delivery</h3><p>You get the full dataset plus the script, documented and ready to re-run.</p></div>
+  </div>
+</div></section>
+
+<section id="pricing"><div class="wrap">
+  <h2>Typical pricing</h2>
+  <p class="sub">Fixed price per job — you always know the cost up front.</p>
+  <div class="grid g3">
+    <div class="card"><h3>Simple</h3><p class="price"><b>from $80</b> · single site, clean export</p>
+      <ul class="checks"><li>1 site</li><li>CSV / JSON / Excel</li><li>Script included</li></ul></div>
+    <div class="card"><h3>Advanced</h3><p class="price"><b>from $200</b> · JS, login or large volume</p>
+      <ul class="checks"><li>JavaScript sites</li><li>Pagination &amp; logins</li><li>Robust error handling</li></ul></div>
+    <div class="card"><h3>Recurring</h3><p class="price"><b>from $150</b> setup + monthly</p>
+      <ul class="checks"><li>Runs on a schedule</li><li>Monitoring</li><li>Ongoing maintenance</li></ul></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap" style="text-align:center">
+  <h2>Need a dataset?</h2>
+  <p class="sub">Send the site and the fields — I'll reply with a plan and a free sample.</p>
+  <a class="btn" href="mailto:YOUR_EMAIL_HERE">Email me</a>
+  <a class="btn alt" href="UPWORK_PROFILE_URL" target="_blank" rel="noopener">Hire on Upwork</a>
+</div></section>
+
+<footer><div class="wrap">
+  Built with Python · requests · BeautifulSoup · Playwright ·
+  <a href="https://github.com/salcar420" target="_blank" rel="noopener">github.com/salcar420</a>
+</div></footer>
+</body>
+</html>
